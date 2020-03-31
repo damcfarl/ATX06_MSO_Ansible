@@ -1,0 +1,10 @@
+
+[mso]
+ mso1 host="14.2.172.143" user="admin" pass="cisco!123456"
+
+[apic]
+ apic1 host2="14.2.172.141" user2="admin" pass2="cisco!123"
+ apic2 host3="14.2.172.142" user3="admin" pass3="cisco!123"
+
+[vcenter]
+vc1 host="172.31.186.25" user="administrator" pass="xxxxx"

@@ -1,0 +1,9 @@
+#/bin/bash
+
+
+
+/usr/bin/ansible-playbook -i hosts 95-remove-schema.yml
+/usr/bin/ansible-playbook -i hosts 96-remove-schema.yml
+/usr/bin/ansible-playbook -i hosts 99a-undeploy-schema.yml
+/usr/bin/ansible-playbook -i hosts 99b-undeploy-schema.yml
+

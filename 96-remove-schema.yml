@@ -1,0 +1,22 @@
+---
+
+  - name: create a schema
+    hosts: mso
+    connection: local
+    gather_facts: no
+
+    vars_files:
+      - external_vars.yml
+
+    tasks:
+    - name: add a new schema
+      delegate_to: localhost 
+      mso_schema_template: 
+        host: "{{ host }}"
+        username: "{{ user }}"
+        password: "{{ pass }}"
+        tenant: "{{ tenant }}"
+        schema: "{{ schema }}"
+        template: "{{ template }}"
+        state: absent
+        validate_certs: no

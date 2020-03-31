@@ -1,0 +1,23 @@
+---
+
+  - name: undeploy schema
+    hosts: mso1
+    connection: local
+    gather_facts: no
+
+    vars_files:
+    - external_vars.yml
+
+    tasks:
+    - name: undeploy schema site 2
+      delegate_to: localhost 
+      mso_schema_template_deploy: 
+        host: "{{ host }}"
+        username: "{{ user }}"
+        password: "{{ pass }}"
+        schema: "{{ schema }}"
+        template: "{{ template }}"
+        site: "{{ site2 }}"
+        state: undeploy
+        validate_certs: no
+

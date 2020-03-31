@@ -1,0 +1,24 @@
+---
+
+  - name: delete a tenant
+    hosts: mso1
+    connection: local
+    gather_facts: no
+
+    vars_files:
+      - external_vars.yml
+
+    tasks:
+    - name: add a new tenant
+      delegate_to: localhost 
+      mso_tenant: 
+        host: "{{ host }}"
+        username: "{{ user }}"
+        password: "{{ pass }}"
+        tenant: "{{ tenant }}"
+        display_name: "{{ tenant }}"
+        users: "{{ user }}"
+        sites:
+          - "{{ site1 }}"
+        state: absent
+        validate_certs: no
