@@ -7,4 +7,4 @@
  apic2 host3="14.2.172.142" user3="admin" pass3="cisco!123"
 
 [vcenter]
-vc1 host="172.31.186.25" user="administrator" pass="xxxxx"
+vc1 host="10.122.143.52" user="admin" pass="xxxx"

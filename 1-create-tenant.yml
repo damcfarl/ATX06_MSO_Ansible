@@ -23,10 +23,14 @@
      display_name: "Ansible Tenant T01"
      description: "Tenant configured by Ansible"
      users: "{{ user }}"
+
+
+
      sites:
        - "{{ site1 }}"
        - "{{ site2 }}"
      state: "{{ status }}"
+     use_ssl: yes
      validate_certs: no
      use_proxy: no
 
